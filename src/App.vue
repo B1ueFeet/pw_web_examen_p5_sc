@@ -1,15 +1,21 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<h1>Universidad central del Ecuador</h1>
+<h2>Facultad de Ingenieria Ciencias Fisicas y Matematica</h2>
+<NavBar/>
+  <router-view/>
+<footer>Todos los derechos reservados &#174;</footer>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import EstudiantePaginaVue from './pages/GuardarEstudiante.vue'
+import NavBar from './components/NavBar.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    EstudiantePaginaVue,
+    NavBar
   }
 }
 </script>
@@ -22,5 +28,18 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+img{
+  width: 200px;
+  height: 200px;
+}
+
+footer{
+  position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:20%;
 }
 </style>
